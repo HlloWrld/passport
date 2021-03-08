@@ -13,8 +13,9 @@ module.exports = {
     res.redirect("/dashboard");
   },
 
+  // admin function not working properly 
   isAdmin: function (req, res, next) {
-    if (!req.admin()) {
+    if (req.admin()) {
       return next();
     }
     res.redirect("/dashboard");

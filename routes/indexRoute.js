@@ -1,3 +1,4 @@
+const e = require("express");
 const express = require("express");
 const router = express.Router();
 const { ensureAuthenticated, isAdmin } = require("../middleware/checkAuth");
@@ -25,3 +26,6 @@ router.get("/test", isAdmin, (req, res) => {
 });
 
 module.exports = router;
+
+
+
